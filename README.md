@@ -32,11 +32,10 @@ xに教師の深い探索の評価値を使用し、σには定数値をいれ�
 
 ガウス関数のグラフでは、横軸に標準偏差σが使用されます。
 Gaussian_lambdaをグラフにした場合、グラフの横軸が評価値xになり、縦軸がlambdaになります。
-
+![Gaussian_lambda(σ1000_lambda0.6・0.5・0.4)](https://raw.githubusercontent.com/Bonta0729/Gaussian_lambda/master/Gaussian_lambda(%CF%831000_lambda0.6%E3%83%BB0.5%E3%83%BB0.4).png)
 信頼区間1σの確率は約68.3％ですが、x＝0の時の確率が50％からスタートする場合、信頼区間1σの確率は84.1％になります。
 
 勝率84.1％の評価値は999.4になるので計算しやすいように切り上げてσ＝1000に決定しました。
-![Gaussian_lambda(σ1000_lambda0.6・0.5・0.4)](https://raw.githubusercontent.com/Bonta0729/Gaussian_lambda/master/Gaussian_lambda(%CF%831000_lambda0.6%E3%83%BB0.5%E3%83%BB0.4).png)
 
 序盤と最終盤の設定はそれ程難しくは無いが、中盤の指し手がガウス曲線lambdaに影響される為、標準偏差σの決定が重要になります。
 σ＝1000が正解の値なのかは自分には証明不可能なので、誰か追試して正解の値を見つけてくれる事を期待しています。
