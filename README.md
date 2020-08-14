@@ -18,6 +18,7 @@ xに教師の深い探索の評価値を使用し、σには定数値をいれ�
 
 分散を大きくすると、落ち幅が小さいなだらかな曲線になる。σ(標準偏差)の値が最も強さに影響します。
 ![Gaussian_lambda(lambda0.5_σ600・800・1000)](https://raw.githubusercontent.com/Bonta0729/Gaussian_lambda/master/Gaussian_lambda(lambda0.5_%CF%83600%E3%83%BB800%E3%83%BB1000).png)
+
 σ＝600～1200位まで色々な数値をlambdaとの組み合わせ50パターン程学習を試しました。
 最初にσにponanza定数に使われている600を使ってみたが、lambdaの下げ幅が大きすぎるのか全然強くならない。
 σ＝900の時はまあまあmove accuracyが良かったが、test_cross_entropyがやや悪くなる。
