@@ -48,6 +48,7 @@ Gaussian_lambdaをグラフにした場合、グラフの横軸が評価値xに�
 YaneuraOuの場合、learner.cppのlambdaが入った更新式のlambdaをGaussian_lambdaに置き換えるだけでOKです。
 
 
+
 # 学習持のlambda設定
 元々のノーマルなlambdaは、数値を大きくするとmove accuracyが良くなりtest_cross_entropyが悪くなる傾向があります。
 逆にlambdaを小さくすると、move accuracyが悪くなりtest_cross_entropyが良くなる傾向があります。
