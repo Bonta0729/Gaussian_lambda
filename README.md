@@ -15,6 +15,7 @@ Gaussian_lambda = lambda * exp(-x^2/2σ^2)
 
 xに教師の深い探索の評価値を使用し、σには定数値をいれる(σ＝標準偏差、σ^2＝分散)。
 評価値0で最大値(lambda設定値)になり、評価値が大きくなるにつれてlambdaが0に近づいていく。
+
 分散を大きくすると、落ち幅が小さいなだらかな曲線になる。σ(標準偏差)の値が最も強さに影響します。
 ![Gaussian_lambda(lambda0.5_σ600・800・1000)](https://raw.githubusercontent.com/Bonta0729/Gaussian_lambda/master/Gaussian_lambda(lambda0.5_%CF%83600%E3%83%BB800%E3%83%BB1000).png)
 σ＝600～1200位まで色々な数値をlambdaとの組み合わせ50パターン程学習を試しました。
