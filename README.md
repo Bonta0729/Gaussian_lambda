@@ -15,6 +15,7 @@ Gaussian_lambda = lambda * exp(-x^2/2σ^2)
 
 xに教師の深い探索の評価値を使用し、σには定数値をいれる(σ＝標準偏差、σ^2＝分散)。
 評価値0で最大値(lambda設定値)になり、評価値が大きくなるにつれてlambdaが0に近づいていく。
+
 分散を大きくすると、落ち幅が小さいなだらかな曲線になる。σ(標準偏差)の値が最も強さに影響します。
 ![Gaussian_lambda(lambda0.5_σ600・800・1000)](https://raw.githubusercontent.com/Bonta0729/Gaussian_lambda/master/Gaussian_lambda(lambda0.5_%CF%83600%E3%83%BB800%E3%83%BB1000).png)
 
@@ -32,6 +33,7 @@ xに教師の深い探索の評価値を使用し、σには定数値をいれ�
 
 Gaussian_lambdaをグラフにした場合、グラフの横軸が評価値xになり、縦軸がlambdaになります。
 信頼区間1σの確率は約68.3％ですが、x＝0の時の確率が50％からスタートする場合、信頼区間1σの確率は84.1％になります。
+
 勝率84.1％の評価値は999.4になるので計算しやすいように切り上げてσ＝1000に決定しました。
 ![Gaussian_lambda(σ1000_lambda0.6・0.5・0.4)](https://raw.githubusercontent.com/Bonta0729/Gaussian_lambda/master/Gaussian_lambda(%CF%831000_lambda0.6%E3%83%BB0.5%E3%83%BB0.4).png)
 
@@ -46,10 +48,12 @@ YaneuraOuの場合、learner.cppのlambdaが入った更新式のlambdaをGaussi
 # 学習持のlambda設定
 元々のノーマルなlambdaは、数値を大きくするとmove accuracyが良くなりtest_cross_entropyが悪くなる傾向があります。
 逆にlambdaを小さくすると、move accuracyが悪くなりtest_cross_entropyが良くなる傾向があります。
+
 Gaussian_lambdaはこれらの中間のバランスの取れた学習結果になります。
 
 Gaussian_lambdaではlambda設定を0.5よりも少しだけ大きめの値にすることをお勧めします。0.52～0.54辺りが良さそうな感じでした。
 教師データでかなり深い探索をさせている場合は、評価値の信頼性が高まるのでlambdaをもう少しだけ上げても良いかもしれません。
+
 終盤は自動的にGaussian_lambdaが小さくなるのであまり気にする必要はありません。いかに序盤の学習をlambda設定でコントロールするかが焦点になります。
 ただし、lambdaを大きくしすぎると終盤力に悪影響するので程々の値にするか、lambda2・lambda_limitが併用可能なので序盤だけ大きくするという方法もありえます。
 
