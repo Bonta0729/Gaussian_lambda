@@ -11,7 +11,7 @@ elmo式学習のlambdaは0で教師の勝敗結果のみから学習し、1で�
 lambda2のlambda_limit境界でlambdaが大きく変化するのは、評価方法の大きな変化による評価の間違いや読み抜け等が起きる事もあるのではないかと思い、
 評価値の変化によってlambdaを滑らかに変動させるためにガウス関数で書き換え、Gaussian_lambdaと名付けて実装しました。
 
-Gaussian_lambda = lambda * exp(-x^2/2σ^2)
+# Gaussian_lambda = lambda * exp(-x^2/2σ^2)
 
 xに教師の深い探索の評価値を使用し、σには定数値をいれる(σ＝標準偏差、σ^2＝分散)。
 評価値0で最大値(lambda設定値)になり、評価値が大きくなるにつれてlambdaが0に近づいていく。
