@@ -37,7 +37,7 @@ Gaussian_lambdaをグラフにした場合、グラフの横軸が評価値xに�
 
 現在、多くの将棋プログラムが、勝率＝1/(1+exp(-評価値/600))にしているので、評価値=-600*log((1/勝率)-1) である事から、
 
-勝率84.1％の評価値は999.4になるので計算しやすいように切り上げてσ＝1000に決定しました。
+勝率84.1％の評価値は約999.4になるので計算しやすいように切り上げてσ＝1000に決定しました。
 
 ![Gaussian_lambda(σ1000_lambda0.6・0.5・0.4)](https://raw.githubusercontent.com/Bonta0729/Gaussian_lambda/master/Gaussian_lambda(%CF%831000_lambda0.6%E3%83%BB0.5%E3%83%BB0.4).png)
 
