@@ -24,7 +24,7 @@ xに教師の深い探索の評価値を使用し、σには定数値をいれ�
 最初にσにponanza定数に使われている600を使ってみたが、lambdaの下げ幅が大きすぎるのか全然強くならない。
 
 σ＝900の時はまあまあmove accuracyが良かったが、test_cross_entropyがやや悪くなる。
-σ＝1000の方がmove accuracyが悪かったが、test_cross_entropyが良くなる。(move accuracy・test_cross_entropyはYaneuraOuの学習logで使用されている数値です。)
+σ＝1000の方がmove accuracyが悪かったが、test_cross_entropyが良くなる。(move accuracy・test_cross_entropyは、YaneuraOuの学習logで使用されている数値です。)
 
 色々な数値を試した結果、σ＝900から1000辺りが良いという結論に達しました。特にσ＝1000が強そうでしたが、膨大なパターンが試せず断定は出来ませんでした。
 
