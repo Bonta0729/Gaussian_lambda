@@ -1,0 +1,6 @@
+このlearner.cppは、YaneuraOuのlearner.cppのlambdaが入った更新式のlambdaをGaussian_lambdaに置き換えたものです。
+このファイルを差し替えてYaneuraOuをビルドするだけでGaussian_lambdaでの学習が可能になります。
+
+
+ライセンス
+YaneuraOuのソースコードはGPLv3なのでこのソースコードもGPLv3に従うものとします。
