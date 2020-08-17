@@ -48,7 +48,7 @@ Gaussian_lambdaをグラフにした場合、グラフの横軸が評価値xに�
 
 この学習法はNNUEに限らず、elmo式であればKPPTの学習等にも使用可能なので汎用性が高いと思います。
 
-YaneuraOuの場合、learner.cppのlambdaが入った更新式のlambdaをGaussian_lambdaに置き換えるだけでOKです。
+YaneuraOuの場合、learner.cppのlambdaが入った更新式のlambdaをGaussian_lambdaに置き換えるだけでOKです。(改変後のsourceはlearner.cppの1117行目～1149行目)
 
 
 
