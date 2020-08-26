@@ -17,6 +17,7 @@ Gaussian_lambdaと名付けて実装しました。
 xに教師の深い探索の評価値を使用し、σには定数値をいれる(σ＝標準偏差、σ^2＝分散)。  
 評価値0で最大値(lambda設定値)になり、評価値が大きくなるにつれてlambdaが0に近づいていく。  
 分散を大きくすると、落ち幅が小さいなだらかな曲線になる。σ(標準偏差)の値が最も強さに影響します。  
+序盤と最終盤の設定はそれ程難しくは無いが、中盤の指し手がガウス曲線lambdaに影響される為、標準偏差σの決定が重要になります。  
 
 ![Gaussian_lambda(lambda0.5_σ600・800・1000)](https://raw.githubusercontent.com/Bonta0729/Gaussian_lambda/master/Gaussian_lambda(lambda0.5_%CF%83600%E3%83%BB800%E3%83%BB1000).png)
 
@@ -37,7 +38,6 @@ Gaussian_lambdaをグラフにした場合、グラフの横軸が評価値xに�
 
 ![Gaussian_lambda(σ1000_lambda0.6・0.5・0.4)](https://raw.githubusercontent.com/Bonta0729/Gaussian_lambda/master/Gaussian_lambda(%CF%831000_lambda0.6%E3%83%BB0.5%E3%83%BB0.4).png)
 
-序盤と最終盤の設定はそれ程難しくは無いが、中盤の指し手がガウス曲線lambdaに影響される為、標準偏差σの決定が重要になります。  
 σ＝1000が正解の値なのかは自分には証明不可能ですが、勝率連動型可変lambdaとして考えれば悪くない数値のような気がします。誰か追試して正解の値を見つけてくれる事を期待しています。  
 
 こんな事するより進行度をlambdaに利用すれば？とか言われてしまいそうですが、コードの改造がごく僅かで簡単だったのでこの手法を実装しました。進行度を利用したものを誰か作ってくれることも期待しています。(tttakさんが技巧2をYaneuraOuの教師データで学習する際に進行度をlambdaに利用していましたが。)  
