@@ -3,7 +3,7 @@ elmo式学習のlambda設定のGaussian化による学習の最適化
 
 # elmo式学習のlambda設定のGaussian化とは何か？
 コンピューター将棋の強化学習ではelmo式学習の登場で、当時最強を誇っていたponanzaに引導を渡しました。  
-その後NNUEの学習でも採用され、stockfish NNUEでもelmo式学習が使用されています。 
+その後NNUEの学習でも採用され、コンピューターチェスのstockfish NNUEでもelmo式学習が使用されています。 
 
 elmo式学習の設定に存在するlambdaは、0で教師の勝敗結果のみから学習し(Q-learning)、1で浅い探索の評価値を勝率変換したものから教師の深い探索の評価値を勝率変換したものを引いたものだけを学習します。(Rootstrap)
 
