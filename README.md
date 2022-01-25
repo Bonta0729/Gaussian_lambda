@@ -13,7 +13,8 @@ elmo式学習の設定に存在するlambdaは、0から1の間の数値を設�
 例えば、教師データ生成時に序盤に正解の手を指していたとしても、中終盤などで読み抜けなどがあって負けた場合、序盤の正解の指し手が全て負けとして記録されてしまいます。  十数手程度の探索性能による勝敗結果が原因で、指し手が決定されて戦型が偏ってしまう懸念があります。(実際に巷の評価関数は既に居飛車の特定の戦形に偏ってしまっているようですが、勝敗結果が少なからず影響している気がするようなしないような…)  
 
 序盤に対する勝敗結果の影響については、Oracle DevelopersによるAlphaZero実装の解説記事でも言及されています。  
-[Lessons From AlphaZero (part 4): Improving the Training Target](https://medium.com/oracledevs/lessons-from-alphazero-part-4-improving-the-training-target-6efba2e71628)
+[Lessons From AlphaZero (part 4): Improving the Training Target](https://medium.com/oracledevs/lessons-from-alphazero-part-4-improving-the-training-target-6efba2e71628)  
+勝敗結果を使用しない場合のメリットの他にもデメリットとして、水平線効果に弱いことが挙げられています。
 
 コンピューター将棋ソフトのYaneuraOuの学習ではlambda・lambda2の2段階設定が可能ですが、序盤と終盤はある程度狙った学習ができるのかもしれませんが、中盤は上手く学習しずらいのではないか、  
 さらにlambda2使用時のlambda_limit境界でlambdaが大きく変化するのは、学習方法の大きな変化による評価の間違いや読み抜け等が起きる事もあるのではないかと思い、
