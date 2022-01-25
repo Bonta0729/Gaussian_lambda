@@ -14,7 +14,7 @@ elmo式学習の設定に存在するlambdaは、0から1の間の数値を設�
 
 序盤に対する勝敗結果の影響については、Oracle DevelopersによるAlphaZero実装の解説記事でも言及されています。  
 [Lessons From AlphaZero (part 4): Improving the Training Target](https://medium.com/oracledevs/lessons-from-alphazero-part-4-improving-the-training-target-6efba2e71628)  
-勝敗結果を使用しない場合のメリットの他にもデメリットとして、水平線効果に弱いことが挙げられています。
+勝敗結果を使用しない場合のメリットの他にもデメリットとして、水平線効果に弱いことが挙げられていて、結論として探索結果と勝敗結果を両方混ぜた方が良いとなっています。  
 
 コンピューター将棋ソフトのYaneuraOuの学習ではlambda・lambda2の2段階設定が可能ですが、序盤と終盤はある程度狙った学習ができるのかもしれませんが、中盤は上手く学習しずらいのではないか、  
 さらにlambda2使用時のlambda_limit境界でlambdaが大きく変化するのは、学習方法の大きな変化による評価の間違いや読み抜け等が起きる事もあるのではないかと思い、
