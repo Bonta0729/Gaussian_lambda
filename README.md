@@ -62,6 +62,8 @@ Gaussian_lambdaをグラフにした場合、グラフの横軸が評価値xに�
 
 今回の場合は、YaneuraOuのlearner.cppのlambdaが入った更新式のlambdaをGaussian_lambdaに置き換えるだけでOKです。(改変後のsourceはlearner.cppの1121行目～1129行目と1149行目～1153行目)  
 この学習法はNNUEに限らず、elmo式であればKPPTの学習等にも使用可能なので汎用性が高いと思います。  
+ディープラーニングの学習でも使用は可能ではないかと思います。  
+dlshogiの学習では、Value Network の学習の損失関数は、勝敗を教師データとした交差エントロピーと、探索結果の評価値を教師データとした交差エントロピーの和としているので、この部分の割合をGaussian_lambdaのように変化させる事は可能であると思われます。  
 
 # 学習時のlambda設定
 元々のノーマルなlambdaは、数値を大きくするとmove accuracyが良くなりtest_cross_entropyが悪くなる傾向があります。  
