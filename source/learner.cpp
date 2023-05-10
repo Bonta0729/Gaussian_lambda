@@ -1124,7 +1124,7 @@ double calc_grad(Value deep, Value shallow , const PackedSfenValue& psv)
 	// Gaussian_lambda = lambda * exp(-x^2/2σ^2)
 	// 従来のelmo方式のlambdaをガウス関数で書き換えて、評価値に対応して滑らかに変動させる( x = 教師の評価値 、 σ = 標準偏差 )
 	// 2σ^2 = 2 * 1000 * 1000  (σ = 1000) 標準偏差σを大きくすると、落ち幅が小さいなだらかな曲線になる。
-	const double Gaussian_lambda = double(lambda * exp(double((-1 * teacher_eval * teacher_eval) / 2 * 1000 * 1000)));
+	const double Gaussian_lambda = double(lambda * exp(double((-1 * teacher_eval * teacher_eval) / (2 * 1000 * 1000))));
 
 	const double grad = (1 - Gaussian_lambda) * (eval_winrate - t) + Gaussian_lambda * (eval_winrate - teacher_winrate);
 
