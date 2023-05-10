@@ -1148,7 +1148,7 @@ void calc_cross_entropy(Value deep, Value shallow, const PackedSfenValue& psv,
 
 	const double teacher_eval = double(-600 * std::log((1 / winning_percentage(deep)) - 1));
 
-	const double Gaussian_lambda = double(lambda * exp(double((-1 * teacher_eval * teacher_eval) / 2 * 1000 * 1000)));
+	const double Gaussian_lambda = double(lambda * exp(double((-1 * teacher_eval * teacher_eval) / 2 * (1000 * 1000))));
 
 	const double m = (1.0 - Gaussian_lambda) * t + Gaussian_lambda * p;
 
