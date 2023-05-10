@@ -1,4 +1,4 @@
-このlearner.cppは、YaneuraOuのlearner.cppのlambdaが入った更新式のlambdaをGaussian_lambdaに置き換えたものです。
+このlearner.cppは、YaneuraOu v5.33のlearner.cppのlambdaが入った更新式のlambdaをGaussian_lambdaに置き換えたものです。
 このファイルを差し替えてYaneuraOuをビルドするだけでGaussian_lambdaでの学習が可能になります。
 学習時のコマンドは、通常のYaneuraOuと全く同じで、Gaussian_lambdaではなくlambdaを設定します。
 
