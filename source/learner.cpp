@@ -1095,8 +1095,8 @@ double calc_grad(Value deep, Value shallow, const PackedSfenValue& psv)
 // elmoのほうは式を内分していないので値が違う。
 // learnコマンドでこの値を設定できる。
 // 0.33は、elmo(WCSC27)で使われていた定数(0.5)相当
-double ELMO_LAMBDA = 0.33;
-double ELMO_LAMBDA2 = 0.33;
+double ELMO_LAMBDA = 0.4;
+double ELMO_LAMBDA2 = 0.4;
 double ELMO_LAMBDA_LIMIT = 32000;
 
 double calc_grad(Value deep, Value shallow , const PackedSfenValue& psv)
@@ -2570,8 +2570,8 @@ void learn(Position&, istringstream& is)
 
 #if defined (LOSS_FUNCTION_IS_ELMO_METHOD)
 	// elmo lambda
-	ELMO_LAMBDA = 0.33;
-	ELMO_LAMBDA2 = 0.33;
+	ELMO_LAMBDA = 0.4;
+	ELMO_LAMBDA2 = 0.4;
 	ELMO_LAMBDA_LIMIT = 32000;
 #endif
 
